@@ -99,11 +99,12 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-color: #1a237e; /* Fallback color */
+		background-image: url("images/helix_nebula.jpg"), -moz-linear-gradient(45deg, #2196F3 15%, #0D47A1 85%);
+		background-image: url("images/helix_nebula.jpg"), -webkit-linear-gradient(45deg, #2196F3 15%, #0D47A1 85%);
+		background-image: url("images/helix_nebula.jpg"), -ms-linear-gradient(45deg, #2196F3 15%, #0D47A1 85%);
+		background-image: url("images/helix_nebula.jpg"), linear-gradient(45deg, #2196F3 15%, #0D47A1 85%);
+		color: rgba(255, 255, 255, 0.65);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -326,6 +327,7 @@ input, select, textarea {
 		background: rgba(255, 255, 255, 0.075);
 		border-color: rgba(255, 255, 255, 0.35);
 	}
+
 
 	hr {
 		border-bottom-color: rgba(255, 255, 255, 0.35);
@@ -3121,7 +3123,7 @@ input, select, textarea {
 				#header.alt .logo img {
 					display: block;
 					margin: 0 auto;
-					max-width: 75%;
+					max-width: 10%;
 				}
 
 		@media screen and (max-width: 1280px) {
