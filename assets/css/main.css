@@ -99,24 +99,36 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #1a237e; /* Fallback color */
-		background-image: url("images/helix_nebula.jpg"), -moz-linear-gradient(45deg, #2196F3 15%, #0D47A1 85%);
-		background-image: url("images/helix_nebula.jpg"), -webkit-linear-gradient(45deg, #2196F3 15%, #0D47A1 85%);
-		background-image: url("images/helix_nebula.jpg"), -ms-linear-gradient(45deg, #2196F3 15%, #0D47A1 85%);
-		background-image: url("images/helix_nebula.jpg"), linear-gradient(45deg, #2196F3 15%, #0D47A1 85%);
-		color: rgba(255, 255, 255, 0.65);
+		/* Ensure a consistent fallback color */
+		background-color: #1a237e; /* Deep blue fallback color */
+	
+		/* Consistent background image and gradient */
+		background-image: url("images/space.jpg"), linear-gradient(45deg, #2196F3 15%, #0D47A1 85%);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	
+		/* Ensure the content doesn't affect background scrolling */
+		background-attachment: fixed;
+		color: rgba(255, 255, 255, 0.65); /* Light text color */
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 17pt;
+		font-weight: 300;
+		line-height: 1.65;
 	}
-
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
+	
+	/* Media Queries to ensure consistency on different screen sizes */
+	@media screen and (max-width: 1280px) {
+		body {
+			background-size: contain; /* Adjusts background size for smaller screens */
 		}
+	}
+	
+	@media screen and (max-width: 480px) {
+		body {
+			background-size: cover; /* Ensures the background fully covers the screen */
+		}
+	}
 
 /* Type */
 
